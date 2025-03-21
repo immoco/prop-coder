@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Components</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="timer">
+        <h2>10-Second Timer</h2>
+        <div id="countdown" style="font-size: 48px; font-weight: bold; color: #2C5F2D;">10</div>
+    </div>
+
+    <div id="pic">
+        <h2>Can you see the picture?</h2>
+        <img src="food.jpeg" alt="A beautiful scene" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+        <div class="button-container">
+            <button onclick="stopTimerAndShowAudio()" style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Yes</button>
+        </div>
+    </div>
+
+    <div id="aud" class="hidden">
+        <h2>You are Mute ? </h2>
+        <button style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Yes</button>
+        <button style="background-color: #dc3545; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">No</button>
+    </div>
+
+    <div id="speak" class="hidden">
+        <h2>You are Deaf ?</h2>
+        <div>
+            <button style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Yes</button>
+            <button style="background-color: #dc3545; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">No</button>
+        </div>
+    </div>
+
+    <script>
+        let timeLeft = 10;
+        const countdownElement = document.getElementById("countdown");
+        const timerDiv = document.getElementById("timer");
+        const picDiv = document.getElementById("pic");
+        const audDiv = document.getElementById("aud");
+        const speakDiv = document.getElementById("speak");
+
+        const countdownTimer = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+            if (timeLeft <= 0) {
+                clearInterval(countdownTimer);
+                timerDiv.classList.add("hidden");
+                picDiv.classList.remove("hidden");
+            }
+        }, 1000);
+
+        function showAudio() {
+            picDiv.classList.add("hidden");
+            audDiv.classList.remove("hidden");
+        }
+        function stopTimerAndShowAudio() {
+            clearInterval(countdownTimer);
+            timerDiv.classList.add("hidden");
+            picDiv.classList.add("hidden");
+            audDiv.classList.remove("hidden");
+        }
+        /*function speakText() {
+            const text = "Can you hear the voice?";
+            const speech = new SpeechSynthesisUtterance(text);
+            speech.lang = "en-US";
+            speech.rate = 1;
+            speech.pitch = 1;
+            window.speechSynthesis.speak(speech);
+            
+            speech.onend = function () {
+                audDiv.classList.add("hidden");
+                speakDiv.classList.remove("hidden");
+            };
+        }
+        */
+    // Redirect to a new page if no click after 10 seconds
+    const redirectTimer = setTimeout(() => {
+        window.location.href = "nextpage.html"; // Change to your desired page URL
+    }, 10000); // 10 seconds
+
+    function stopTimerAndShowAudio() {
+        clearTimeout(redirectTimer); // Stop redirection if "Yes" is clicked
+        clearInterval(countdownTimer);
+        timerDiv.classList.add("hidden");
+        picDiv.classList.add("hidden");
+        audDiv.classList.remove("hidden");
+    }
+    document.querySelectorAll("#aud button, #speak button").forEach(button => {
+    button.addEventListener("click", function() {
+        if (audDiv.classList.contains("hidden")) {
+            speakDiv.classList.add("hidden"); // Hide "speak" div after response
+            // Redirect to the next page or show a new div
+            window.location.href = "nextpage.html"; // Change URL as needed
+        } else {
+            audDiv.classList.add("hidden");
+            speakDiv.classList.remove("hidden");
+            speakText(); // Automatically play the voice message
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
