@@ -1,0 +1,113 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(44, 95, 45, 0.); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    color: white;
+    padding: 15px 50px;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    background: url('food.jpeg') center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+.hero-text {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.btn {
+    background: #FFA500;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+/* How It Works */
+.how-it-works {
+    text-align: center;
+    padding: 50px;
+    background: #F4F4F4;
+}
+
+.how-it-works h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.step {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #2C5F2D;
+    color: white;
+}
