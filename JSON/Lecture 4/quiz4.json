@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Which of the following is a vowel sound in English?",
+    "options": ["p", "b", "a", "t"],
+    "correct_option": 3
+  },
+  {
+    "question": "What is the primary distinction between vowels and consonants?",
+    "options": ["Vowels require more tongue movement", "Consonants are always voiced", "Vowels have minimal obstruction of airflow", "Consonants are always nasal"],
+    "correct_option": 3
+  },
+  {
+    "question": "Which of these is an example of an English alveolar sound?",
+    "options": ["p", "t", "k", "g"],
+    "correct_option": 2
+  },
+  {
+    "question": "What feature distinguishes aspirated from unaspirated sounds?",
+    "options": ["Tongue position", "Lip rounding", "Additional flow of air", "Voicing"],
+    "correct_option": 3
+  },
+  {
+    "question": "Which of the following sounds is a bilabial consonant?",
+    "options": ["p", "t", "s", "k"],
+    "correct_option": 1
+  },
+  {
+    "question": "What is a distinguishing feature of retroflex sounds?",
+    "options": ["They are nasal", "They involve the tongue curling back", "They are only found in English", "They require lip rounding"],
+    "correct_option": 2
+  },
+  {
+    "question": "How can you identify voicing in consonant sounds?",
+    "options": ["By feeling vibration in the vocal cords", "By checking lip movement", "By observing tongue height", "By noticing airflow through the nose"],
+    "correct_option": 1
+  },
+  {
+    "question": "Which of these is a labiodental sound in English?",
+    "options": ["p", "b", "f", "d"],
+    "correct_option": 3
+  },
+  {
+    "question": "How many vowel sounds are there in English?",
+    "options": ["10", "15", "20", "25"],
+    "correct_option": 3
+  },
+  {
+    "question": "Which of these is NOT a place of articulation?",
+    "options": ["Velar", "Dental", "Nasal", "Bilabial"],
+    "correct_option": 3
+  }
+]
