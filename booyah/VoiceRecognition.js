@@ -15,18 +15,21 @@ const VoiceRecognition = () => {
       return;
     }
 
+    // 🛑 Stop any ongoing speech to prevent double audio
+    window.speechSynthesis.cancel();
+
     const text = "Can you hear this audio? Say only... yes.";
     const speech = new SpeechSynthesisUtterance(text);
     speech.lang = "en-US";
     speech.rate = 1;
     speech.pitch = 1;
 
-    window.speechSynthesis.speak(speech);
-
     speech.onend = () => {
       setMessage("Listening for response...");
       startSpeechRecognition();
     };
+
+    window.speechSynthesis.speak(speech);
   };
 
   const startSpeechRecognition = () => {
