@@ -1,13 +1,14 @@
-// src/components/Conversation.js
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../../firebase";
-import { Container } from "react-bootstrap";
 
-const Conversation = () => {
+const VoiceRecognition = () => {
+  const [message, setMessage] = useState("Listening...");
   const [lessons, setLessons] = useState([]);
   const [currentLesson, setCurrentLesson] = useState(0);
   const recognitionRef = useRef(null);
+  const navigate = useNavigate();
 
   // ✅ Initialize Speech Recognition (Continuous Mode)
   const initializeRecognition = () => {
@@ -19,24 +20,28 @@ const Conversation = () => {
 
     const recognition = new SpeechRecognition();
     recognition.lang = "en-US";
-    recognition.continuous = true; // Always listen
+    recognition.continuous = false; // Change to false for single command
     recognition.interimResults = false;
 
     recognition.onresult = (event) => {
       const transcript = event.results[event.results.length - 1][0].transcript.toLowerCase();
       console.log("User said:", transcript);
-      handleVoiceCommand(transcript);
-    };
+      setMessage(`You said: "${transcript}"`);
 
-    recognition.onend = () => {
-      console.warn("Speech recognition stopped. Restarting...");
-      recognition.start(); // Automatically restart if stopped
+      if (transcript.includes("yes")) {
+        setTimeout(() => {
+          navigate("/nextpage"); // Change route as needed
+        }, 1000);
+      } else {
+        speakText("I didn't understand. Say 'Yes' to proceed.");
+        recognition.start(); // Restart recognition
+      }
     };
 
     recognition.onerror = (event) => {
       console.error("Speech recognition error:", event.error);
       speakText("I had trouble understanding you. Please try again.");
-      recognition.start(); // Keep listening on error
+      recognition.start(); // Restart on error
     };
 
     return recognition;
@@ -59,7 +64,7 @@ const Conversation = () => {
     window.speechSynthesis.speak(speech);
   };
 
-  // ✅ Fetch Lessons from Firestore
+  // ✅ Fetch Lessons from Firestore (If needed)
   useEffect(() => {
     const fetchLessons = async () => {
       try {
@@ -73,21 +78,10 @@ const Conversation = () => {
         }
 
         setLessons(lessonList);
-        console.log("Fetched Lessons:", lessonList);
-
-        // Welcome message
-        console.log('error here');
-        speakText("Welcome to English learning. Say 'Next' to begin.", () => {
-          startListening(); // Start listening after speech
-          console.log('error here0');
-
-        });
-
-        console.log('error here1');
-
+        speakText("Welcome! Say 'Yes' to continue.", startListening);
       } catch (error) {
         console.error("Error fetching lessons:", error);
-        speakText("Error loading lessons. Please try again later.");
+        speakText("Error loading lessons. Please try again.");
       }
     };
 
@@ -102,48 +96,13 @@ const Conversation = () => {
     };
   }, []);
 
-  // ✅ Handle Voice Commands
-  const handleVoiceCommand = (command) => {
-    if (command.includes("next")) {
-      nextLesson();
-    } else if (command.includes("repeat")) {
-      repeatLesson();
-    } else if (command.includes("exit")) {
-      speakText("Goodbye!");
-      if (recognitionRef.current) recognitionRef.current.stop();
-    } else {
-      speakText("I didn't understand. Say 'Next', 'Repeat', or 'Exit'.");
-    }
-  };
-
-  // ✅ Move to the Next Lesson
-  const nextLesson = () => {
-    if (currentLesson < lessons.length) {
-      const { question } = lessons[currentLesson];
-      speakText(question);
-      setCurrentLesson(currentLesson + 1);
-    } else {
-      speakText("You have completed all lessons. Say 'Exit' to finish.");
-    }
-  };
-
-  // ✅ Repeat Current Lesson
-  const repeatLesson = () => {
-    if (currentLesson > 0) {
-      const { question } = lessons[currentLesson - 1];
-      speakText(`Repeating: ${question}`);
-    } else {
-      speakText("No lesson to repeat. Say 'Next' to begin.");
-    }
-  };
-
   return (
-    <Container className="text-center mt-5">
-      <h1>English Learning for the Blind</h1>
-      <p>The system is always listening for your voice.</p>
-      <p>Say "Next" to proceed, "Repeat" to hear again, or "Exit" to quit.</p>
-    </Container>
+    <div style={{ textAlign: "center", marginTop: "20vh" }}>
+      <h1>Voice Recognition</h1>
+      <h2>{message}</h2>
+      <p>Say "Yes" to proceed.</p>
+    </div>
   );
 };
 
-export default Conversation;
+export default VoiceRecognition;
