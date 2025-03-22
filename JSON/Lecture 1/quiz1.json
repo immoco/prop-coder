@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "What is the main focus of this course?",
+      "options": ["Advanced English", "Basic English", "Mathematics", "Physics"],
+      "correct": 2
+    },
+    {
+      "question": "What is the relationship between language learning and data science in this course?",
+      "options": [
+        "They are unrelated",
+        "Language learning helps understand data",
+        "Data science is not part of the course",
+        "Only programming is covered"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What is the key distinction between acquisition and learning of language?",
+      "options": [
+        "Acquisition is automatic, learning requires effort",
+        "Learning is automatic, acquisition requires effort",
+        "Both require effort",
+        "Both happen automatically"
+      ],
+      "correct": 4
+    },
+    {
+      "question": "At what age does language learning become more effortful?",
+      "options": ["5 years", "10 years", "15 years", "20 years"],
+      "correct": 1
+    },
+    {
+      "question": "What is recommended for improving speaking skills?",
+      "options": [
+        "Only speaking practice",
+        "Listening and reading regularly",
+        "Only memorization of words",
+        "Writing more frequently"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Why is listening to news bulletins recommended?",
+      "options": [
+        "They contain complex sentences",
+        "They help in understanding formal speech patterns",
+        "They focus only on entertainment",
+        "They are difficult to understand"
+      ],
+      "correct": 4
+    },
+    {
+      "question": "Why do adults struggle to learn new language sounds?",
+      "options": [
+        "Lack of motivation",
+        "Pre-existing sound system conditioning",
+        "Limited vocabulary",
+        "English is difficult"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the key strategy for learning language effectively?",
+      "options": [
+        "Memorizing words",
+        "Observing and applying patterns",
+        "Ignoring subconscious learning",
+        "Focusing only on writing"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What type of reading material is suggested for better language learning?",
+      "options": [
+        "Technical books only",
+        "Storybooks and newspapers",
+        "Poetry only",
+        "No reading is required"
+      ],
+      "correct": 4
+    },
+    {
+      "question": "What is emphasized regarding pronunciation in this course?",
+      "options": [
+        "You must sound like a native speaker",
+        "You should maintain your own accent and improve clarity",
+        "Pronunciation does not matter",
+        "Speaking fast is more important than pronunciation"
+      ],
+      "correct": 3
+    }
+  ]
+}
