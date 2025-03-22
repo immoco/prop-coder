@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Which of the following is an example of a diphthong in English?",
+    "options": ["æ", "aɪ", "ɪ", "ʊ"],
+    "correct_option": 2
+  },
+  {
+    "question": "What is the main characteristic of a diphthong?",
+    "options": ["A single, steady vowel sound", "A glide from one vowel sound to another", "A nasalized vowel", "A stressed syllable"],
+    "correct_option": 2
+  },
+  {
+    "question": "Which of the following is a centering diphthong?",
+    "options": ["eɪ", "aʊ", "ɪə", "ɔɪ"],
+    "correct_option": 3
+  },
+  {
+    "question": "Which diphthong is found in the word 'toy'?",
+    "options": ["aɪ", "ɔɪ", "eɪ", "aʊ"],
+    "correct_option": 2
+  },
+  {
+    "question": "Which of these words contains a diphthong?",
+    "options": ["cat", "goat", "dog", "pen"],
+    "correct_option": 2
+  },
+  {
+    "question": "Which of the following is a semi-vowel in English?",
+    "options": ["l", "r", "w", "s"],
+    "correct_option": 3
+  },
+  {
+    "question": "What distinguishes a semi-vowel from a vowel?",
+    "options": ["It is always nasalized", "It is produced with full closure in the vocal tract", "It behaves like a consonant but has vowel-like qualities", "It only occurs at the end of words"],
+    "correct_option": 3
+  },
+  {
+    "question": "Which of the following words contains a semi-vowel?",
+    "options": ["run", "yes", "cat", "dog"],
+    "correct_option": 2
+  },
+  {
+    "question": "Which of the following is a glide sound in English?",
+    "options": ["w", "b", "d", "m"],
+    "correct_option": 1
+  },
+  {
+    "question": "Which of the following words contains the diphthong /aɪ/?",
+    "options": ["time", "top", "ten", "tap"],
+    "correct_option": 1
+  }
+]
