@@ -1,0 +1,54 @@
+{
+  "quiz": [
+    {
+      "question": "How many vowel sounds are there in English?",
+      "options": ["5", "10", "12", "15"],
+      "correct_option": 3
+    },
+    {
+      "question": "Which of the following is a diphthong?",
+      "options": ["/i:/", "/eɪ/", "/æ/", "/ʌ/"],
+      "correct_option": 2
+    },
+    {
+      "question": "Which place of articulation is associated with the sounds /p/ and /b/?",
+      "options": ["Dental", "Alveolar", "Velar", "Bilabial"],
+      "correct_option": 4
+    },
+    {
+      "question": "Which of the following is a voiced consonant?",
+      "options": ["/t/", "/k/", "/z/", "/s/"],
+      "correct_option": 3
+    },
+    {
+      "question": "Which IPA symbol represents the 'sh' sound in 'she'?",
+      "options": ["/ʃ/", "/tʃ/", "/ʒ/", "/s/"],
+      "correct_option": 1
+    },
+    {
+      "question": "How many monophthongs are in General American English?",
+      "options": ["5", "12", "14", "10"],
+      "correct_option": 3
+    },
+    {
+      "question": "Which of the following words contains a diphthong?",
+      "options": ["Cat", "Meet", "Goat", "Sit"],
+      "correct_option": 3
+    },
+    {
+      "question": "What is the manner of articulation for the sound /m/?",
+      "options": ["Plosive", "Fricative", "Nasal", "Affricate"],
+      "correct_option": 3
+    },
+    {
+      "question": "Which of the following is a high front vowel?",
+      "options": ["/u:/", "/æ/", "/i:/", "/ɔ:/"],
+      "correct_option": 3
+    },
+    {
+      "question": "What is the term for the study of speech sounds?",
+      "options": ["Morphology", "Phonetics", "Syntax", "Semantics"],
+      "correct_option": 2
+    }
+  ]
+}
