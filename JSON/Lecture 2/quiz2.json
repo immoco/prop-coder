@@ -1,0 +1,54 @@
+{
+  "quiz": [
+    {
+      "question": "How many letters are there in the English alphabet?",
+      "options": ["24", "25", "26", "27"],
+      "correct_option": 3
+    },
+    {
+      "question": "Which of the following is a vowel sound?",
+      "options": ["B", "C", "E", "D"],
+      "correct_option": 3
+    },
+    {
+      "question": "What is the term for a letter that represents a speech sound?",
+      "options": ["Grapheme", "Phoneme", "Morpheme", "Lexeme"],
+      "correct_option": 1
+    },
+    {
+      "question": "Which of the following words contains a diphthong?",
+      "options": ["Cat", "House", "Dog", "Run"],
+      "correct_option": 2
+    },
+    {
+      "question": "How many vowel sounds are there in English?",
+      "options": ["5", "12", "8", "10"],
+      "correct_option": 2
+    },
+    {
+      "question": "What is the study of speech sounds called?",
+      "options": ["Morphology", "Phonology", "Syntax", "Semantics"],
+      "correct_option": 2
+    },
+    {
+      "question": "Which of these words has a silent letter?",
+      "options": ["Knight", "Happy", "Run", "Water"],
+      "correct_option": 1
+    },
+    {
+      "question": "Which of these is a consonant cluster?",
+      "options": ["AI", "TH", "STR", "OU"],
+      "correct_option": 3
+    },
+    {
+      "question": "Which IPA symbol represents the 'sh' sound in 'she'?",
+      "options": ["ʃ", "θ", "ð", "ŋ"],
+      "correct_option": 1
+    },
+    {
+      "question": "Which of these words contains a schwa sound?",
+      "options": ["About", "Tree", "Sky", "Moon"],
+      "correct_option": 1
+    }
+  ]
+}
